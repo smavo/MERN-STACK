@@ -22,44 +22,28 @@ function Login() {
     // Cuando el usuario quiere iniciar sesión
     const onSubmit = e => {
         e.preventDefault();
-
-
     }
 
     return (
         <div className="form-usuario">
 
-
             <div className="contenedor-form sombra-dark">
                 <h1>Iniciar Sesión</h1>
 
-                <form
-                    onSubmit={onSubmit}
-                >
+                <form onSubmit={onSubmit} >
                     <div className="campo-form">
                         <label htmlFor="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Tu Email"
-                            value={email}
-                            onChange={onChange}
-
-                        />
+                        <input type="email" id="email"
+                            name="email" placeholder="Tu Email"
+                            value={email} onChange={onChange} />
                     </div>
 
                     <div className="campo-form">
                         <label htmlFor="password">Password</label>
                         <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Tu Password"
-                            value={password}
-                            onChange={onChange}
-
-                        />
+                            type="password" id="password"
+                            name="password" placeholder="Tu Password"
+                            value={password} onChange={onChange} />
                     </div>
 
                     <div className="campo-form">
