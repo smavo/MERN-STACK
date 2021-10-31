@@ -1,40 +1,35 @@
-import React from 'react';
 // import logo from './logo.svg';
 // import './App.css';
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "assets/styles/tailwind.css";
-
-// layouts
-
-import Admin from "layouts/Admin.js";
-import Auth from "layouts/Auth.js";
-import Proyectos from 'layouts/Proyectos'
-import Index from 'views/Index';
-
-// views without layouts
-// import Landing from "views/Landing.js";
-// import Profile from "views/Profile.js";
+import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Login from './Components/auth/Login';
+import NuevaCuenta from './Components/auth/NuevaCuenta';
 
 function App() {
-    return (
-        <Router>
-        <Switch>
-            {/* add routes with layouts */}
-            <Route path="/auth" component={Auth} />
-            <Route path="/admin" component={Admin} />
-            <Route path="/project" component={Proyectos} />
-            <Route path="/" exact component={Index} /> 
-
-            {/* add routes without layouts */}
-            {/* <Route path="/landing" exact component={Landing} />
-            <Route path="/profile" exact component={Profile} /> */}
-            {/* add redirect for first page */}
-            <Redirect from="*" to="/" />
-        </Switch>
-        </Router>
-    );
-    }
+  return (
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <p>
+    //       Edit <code>src/App.js</code> and save to reload.
+    //     </p>
+    //     <a
+    //       className="App-link"
+    //       href="https://reactjs.org"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       Learn React
+    //     </a>
+    //   </header>
+    // </div>
+    <Router>
+      <Switch>
+       <Route exact path="/" component={Login}/>
+       <Route exact path="/nueva-cuenta" component={NuevaCuenta} />
+      </Switch>
+    </Router>
+  );
+}
 
 export default App;

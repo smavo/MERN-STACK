@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+:root {
+  --blanco: #ffffff;
+  --gris1: #edf2f6;
+  --gris2: #2f3848;
+  --gris3: #1a202d;
+  --negro: #000000;
+  --headingFont:'Raleway', sans-serif;
+  --textFont:  'Roboto', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .contenedor-app {
+      display: flex;
+      min-height: 100vh;
+  }
+
+  aside {
+      background-color: var(--blanco);
+      flex: 0 0 300px;
+  }
+  .seccion-principal {
+      flex: 1;
+  }
+}
+
+/* BARRA LATERAL */
+aside  {
+  padding: 3rem;
+}
+
+.proyectos {
+  margin-top: 10rem;
+}
+
+.listado-proyectos li {
+  margin-bottom: 2rem;
+}
+
+.listado-proyectos li a {
+  font-size: 1.4rem;
+  color: var(--gris2);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gris2);
+  padding: 1rem;
+}
+
+.nav-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.nav-principal a:first-of-type {
+  margin-right: 2rem;
+}
+
+.contenedor-input {
+  display: flex;
+}
+.contenedor-input label {
+  margin-bottom: 1rem;
+  color: var(--blanco);
+}
