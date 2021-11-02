@@ -4,7 +4,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Login from './Components/auth/Login';
 import NuevaCuenta from './Components/auth/NuevaCuenta';
-import Proyectos from './Components/proyect/proyectos';
+import Proyectos from './Components/proyect/Proyectos';
 function App() {
   return (
     // <div className="App">
