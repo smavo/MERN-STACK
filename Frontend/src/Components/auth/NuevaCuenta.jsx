@@ -27,62 +27,52 @@ function NuevaCuenta() {
     }
 
     return (
-        <div className="antialiased overflow-hidden bg-gray-400 ">
-            <div className="w-full h-screen max-w-lg mx-auto mt-32">
-                <div className="bg-white rounded-lg shadow p-8">
-                    <h1 className="text-2xl font-bold uppercase text-center">Obtener una cuenta</h1>
-                    <form onSubmit={onSubmit} className="py-6" >
-                        <div className="my-2">
-                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
-                                Ingrese su Nombre
-                            </label>
-                            <input className="bg-gray-200 rounded shadow-inner w-full h-12 p-4 mb-4"
-                                type="text" id="nombre" name="nombre" placeholder="Tu Nombre" value={nombre} onChange={onChange}
-                            />
-                        </div>
+        <div className="form-usuario">
 
-                        <div className="my-2">
-                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
-                                Ingrese su Email
-                            </label>
-                            <input className="bg-gray-200 rounded shadow-inner w-full h-12 p-4 mb-4"
-                                type="email" id="email" name="email" placeholder="Tu Email" value={email} onChange={onChange}
-                            />
-                        </div>
-
-                        <div className="my-2">
-                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
-                                Ingrese su Contraseña
-                            </label>
-                            <input className="bg-gray-200 rounded shadow-inner w-full h-12 p-4 mb-4"
-                                type="password" id="password" name="password" placeholder="Tu Password" value={password} onChange={onChange}
-                            />
-                        </div>
-
-                        <div className="my-2">
-                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
-                                Repita su contraseña
-                            </label>
-                            <input className="bg-gray-200 rounded shadow-inner w-full h-12 p-4 mb-4"
-                                type="password" id="confirmar" name="confirmar" placeholder="Repite tu Password" value={confirmar} onChange={onChange}
-                            />
-                        </div>
-
-                        <div className="campo-form">
-                            <input className="text-gray-900 bg-yellow-200 hover:bg-yellow-300 rounded-lg p-4 border block w-full font-bold cursor-pointer uppercase"
-                                type="submit" value="Registrarme" />
-                        </div>
-                    </form>
-
-                    <div className="text-gray-900 font-bold text-center">
-                        <Link to={'/'} className="text-gray-900 text-base text-center font-bold">
-                            Volver a Iniciar Sesión
-                        </Link>
+            <div className="contenedor-form sombra-dark">
+                <form onSubmit={onSubmit} >
+                    <h1>Obtener una cuenta</h1>
+                    <div className="campo-form">
+                        <label htmlFor="nombre"> Nombre </label>
+                        <input
+                            type="text" id="nombre" name="nombre" placeholder="Tu Nombre" value={nombre} onChange={onChange}
+                        />
                     </div>
 
-                </div>
+                    <div className="campo-form">
+                        <label htmlFor="email"> Email </label>
+                        <input
+                            type="email" id="email" name="email" placeholder="Tu Email" value={email} onChange={onChange}
+                        />
+                    </div>
+
+                    <div className="campo-form">
+                        <label htmlFor="password"> Contraseña </label>
+                        <input
+                            type="password" id="password" name="password" placeholder="Tu Password" value={password} onChange={onChange}
+                        />
+                    </div>
+
+                    <div className="campo-form">
+                        <label htmlFor="confirmar"> Repita su contraseña </label>
+                        <input
+                            type="password" id="confirmar" name="confirmar" placeholder="Repite tu Password" value={confirmar} onChange={onChange}
+                        />
+                    </div>
+
+                    <div className="campo-form">
+                        <input className="btn btn-primario btn-block"
+                            type="submit" value="Registrarme" />
+                    </div>
+                </form>
+
+                <Link to={'/'} className="enlace-cuenta">
+                    Volver a Iniciar Sesión
+                </Link>
+
             </div>
         </div>
+
     )
 }
 
