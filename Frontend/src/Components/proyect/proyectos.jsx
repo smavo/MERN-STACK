@@ -10,7 +10,7 @@ const Proyectos = () => {
             <div className="seccion-principal">
             <Barra/>
             <main>
-                <span >Proyectos</span>
+                <h4>Proyectos</h4>
             </main>
             </div>
         </div>

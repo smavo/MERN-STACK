@@ -29,15 +29,14 @@ const NuevoProyecto = () => {
         // Reiniciar el Form
     }
 
-
     return (
         <Fragment>
             <button className="btn btn-block btn-primario"
                 type="button"
             >Nuevo Proyecto</button>
-            <form action="" className="mx-auto" onSubmit={onSubmitProyecto}>
+            <form className="mx-auto" onSubmit={onSubmitProyecto}>
                 <input type="text"  className="input-text" placeholder="Nombre Proyecto" value={nombre} name="nombre" onChange={onchageProyecto}/>
-                <input type="submit" className="mbtn btn-primario btn-block" value="Agregar Proyecto" />
+                <input type="submit" className="btn btn-primario btn-block" value="Agregar Proyecto" />
             </form>
         </Fragment>
     );

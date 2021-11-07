@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* body {
   margin: 0;
@@ -22,6 +19,7 @@ code {
   --gris2: #2f3848;
   --gris3: #1a202d;
   --negro: #000000;
+  --verde: rgb(11, 189, 115);
   --headingFont:'Raleway', sans-serif;
   --textFont:  'Roboto', sans-serif;
 }
@@ -39,13 +37,14 @@ body {
   font-size: 16px; 
   font-size: 1.6rem;
   font-family: var(--textFont);
+  margin: 0px;
 }
 
 
 h1, h2 {
   font-family: var(--headingFont);
   font-weight: 900;
-  margin: 0 0 4rem 0;
+  margin: 0 0 2rem 0;
   text-align: center;
   color: var(--gris2);
 }
@@ -142,18 +141,27 @@ aside  {
 .formulario-nuevo-proyecto .input-text::placeholder{
   color: var(--gris2);
 }
+
 .proyectos {
-  margin-top: 10rem;
+  margin-top: 6rem;
 }
+
 .listado-proyectos li {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
+
 .listado-proyectos li a {
   font-size: 1.4rem;
-  color: var(--gris2);
-  line-height: 1.5;
-  font-weight: 300;
+  color: var(--gris3);
+  line-height: 1;
+  font-weight: 500;
 }
+
+
+.listado-proyectos li a:hover {
+  color: var(--verde);
+}
+
 .app-header {
   display: flex;
   justify-content: space-between;
@@ -161,18 +169,22 @@ aside  {
   background-color: var(--gris2);
   padding: 4rem;
 }
+
 .nombre-usuario {
   color: var(--blanco);
   font-size: 2.2rem;
   margin: 0;
 }
+
 .nombre-usuario span {
   font-weight: 900;
 }
+
 .nav-principal a {
   color: var(--blanco);
   text-decoration: none;
 }
+
 .nav-principal a:first-of-type {
   margin-right: 2rem;
 }
@@ -182,17 +194,21 @@ aside  {
   background-color: var(--gris3);
   padding: 4rem;
 }
+
 .formulario form {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .contenedor-input {
   display: flex;
 }
+
 .contenedor-input label {
   margin-bottom: 1rem;
   color: var(--blanco);
 }
+
 .input-text {
   padding: 1rem;
   border: none;
@@ -205,8 +221,6 @@ aside  {
 .contenedor-tareas {
   padding: 4rem;
 }
-
-
 
 .listado-tareas {
   max-width: 600px;
@@ -223,24 +237,29 @@ aside  {
   border-radius: .5rem;
 
 }
+
 .sombra {
   -webkit-box-shadow: 0px 4px 10px -3px rgba(117,117,117,1);
   -moz-box-shadow: 0px 4px 10px -3px rgba(117,117,117,1);
   box-shadow: 0px 4px 10px -3px rgba(117,117,117,1);
 }
+
 .sombra-dark {
   -webkit-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
   -moz-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
   box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
 }
+
 .tarea .acciones .btn:first-of-type {
   margin-right: 1rem;
 }
+
 .tarea p {
   font-size: 1.6rem;
   flex: 1;
   padding-right: 2rem;
 }
+
 .tarea .btn {
   padding: .8rem;
   font-size:1.4rem;
@@ -251,6 +270,7 @@ aside  {
 .estado {
   margin-right: 1rem;
 }
+
 .estado button, 
 .mensaje {
   font-weight: 900;
@@ -261,31 +281,34 @@ aside  {
   cursor: pointer;
   border: none;
 }
+
 .mensaje {
   text-align: center;
   font-size: 1.6rem;
   border-radius: 0;
 }
+
 .mensaje:hover {
   cursor: default;
 }
+
 .completo,
 .correcto {
   background-color: rgba(154, 252, 154, .3);
   color: var(--gris3);
 }
+
 .incompleto{
   background-color: rgba(255, 178, 178, .4);
   color: var(--gris3);
 }
+
 .error {
   max-width: 600px;
   margin: 2rem auto 0 auto;
   background-color: rgb(170, 0, 0);
   color: var(--blanco);
 }
-
-
 
 .tarea-enter,
 .proyecto-enter {
@@ -309,7 +332,7 @@ aside  {
 .form-usuario {
     background-color: var(--gris2);
     height: 100vh;
-    min-height: 800px;
+    /* min-height: 800px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -324,16 +347,21 @@ aside  {
 }
 
 .campo-form {
-    display: flex;
-    margin-bottom: 2rem;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+    /* margin-bottom: 2rem;
+    align-items: center; */
+    
 }
 .campo-form:last-of-type {
   margin: 0;
 }
 .campo-form label {
-  flex: 0 0 100px;
+  /* flex: 0 0 100px;*/
+  flex: 0 20px; 
+  margin: 15px 0 5px 0 ;
   font-family: var(--textFont);
+  font-weight: 600;
 }
 .campo-form input[type="password"],
 .campo-form input[type="email"], 
@@ -341,12 +369,14 @@ aside  {
   border: 1px solid #e1e1e1;
   padding: 1rem;
   flex: 1;
+  border-radius: 6px;
 }
 
 .enlace-cuenta {
   margin-top: 2rem;
   display: block;
-  opacity: .7;
+  opacity: .9;
+  font-weight: 600;
 }
 
 .alerta {
@@ -379,3 +409,4 @@ aside  {
   background-color: rgb(230, 78, 78);
   color: var(--blanco);
 }
+
