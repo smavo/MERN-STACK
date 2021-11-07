@@ -27,7 +27,7 @@ function NuevaCuenta() {
     }
 
     return (
-        <div className="antialiased overflow-hidden bg-gray-400 ">
+        <div className="form-usuario">
             <div className="w-full h-screen max-w-lg mx-auto mt-32">
                 <div className="bg-white rounded-lg shadow p-8">
                     <h1 className="text-2xl font-bold uppercase text-center">Obtener una cuenta</h1>

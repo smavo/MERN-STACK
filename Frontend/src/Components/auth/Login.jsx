@@ -25,12 +25,12 @@ function Login() {
     }
 
     return (
-        <div className="antialiased overflow-hidden bg-gray-400 ">
-            <div className="w-full h-screen max-w-lg mx-auto mt-32">
-                <div className="bg-white rounded-lg shadow p-8">
-                    <h1 className="text-2xl font-bold uppercase text-center">Iniciar Sesión</h1>
-                    <form onSubmit={onSubmit} className="py-6">
+        <div className="form-usuario">
+            <div className="contenedor-form sombra-dark">
+             
+                    <form onSubmit={onSubmit}>
 
+                    <h1 >Iniciar Sesión</h1>
                         <div className="my-2">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
                                 Email
@@ -62,7 +62,7 @@ function Login() {
                         </Link>
                     </div>
                 </div>
-            </div>
+            
         </div>
 
     )

@@ -10,7 +10,7 @@ const ListarProyecto = () => {
     ]
 
     return (  
-        <ul className="">
+        <ul className="listado-proyectos">
             {proyectos.map(proyecto => (
                 <Proyecto props={proyecto} />
             ))}
