@@ -19,9 +19,10 @@ code {
   --gris2: #2f3848;
   --gris3: #1a202d;
   --negro: #000000;
-  --verde: rgb(11, 189, 115);
+  --verde: rgb(9, 170, 103);
   --headingFont:'Raleway', sans-serif;
   --textFont:  'Roboto', sans-serif;
+  --danger: rgb(214, 52, 52);
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -77,6 +78,7 @@ a {
   border-radius: .5rem;
   border: none;
   transition: background-color .3s ease;
+  border-radius: 10px;
 }
 .btn:hover {
   cursor: pointer;
@@ -90,6 +92,7 @@ a {
 }
 .btn-secundario {
   background-color: var(--gris1);
+  border-radius: 8px;
 }
 .btn-block {
   display: block;
@@ -131,7 +134,7 @@ aside  {
 }
 
 .formulario-nuevo-proyecto {
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 .formulario-nuevo-proyecto .input-text {
   border-bottom: 1px solid var(--gris2);
@@ -143,7 +146,7 @@ aside  {
 }
 
 .proyectos {
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .listado-proyectos li {
@@ -265,6 +268,7 @@ aside  {
   font-size:1.4rem;
   border-radius: 0;
   margin: 0;
+  border-radius: 5px;
 }
 
 .estado {
@@ -294,20 +298,21 @@ aside  {
 
 .completo,
 .correcto {
-  background-color: rgba(154, 252, 154, .3);
-  color: var(--gris3);
+  background-color: var(--verde);
+  color: var(--blanco);
 }
 
 .incompleto{
-  background-color: rgba(255, 178, 178, .4);
-  color: var(--gris3);
+  background-color: var(--danger);
+  color: var(--blanco);
 }
 
 .error {
   max-width: 600px;
   margin: 2rem auto 0 auto;
-  background-color: rgb(170, 0, 0);
+  background-color: var(--danger);
   color: var(--blanco);
+  border-radius: 5px;
 }
 
 .tarea-enter,
