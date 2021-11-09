@@ -7,6 +7,11 @@ export default (state, action) => {
                 ...state,
                 formulario: true
             }
+        case FORMULARIO_PROYECTO:
+            return {
+                ...state,
+                proyectos: action.payload
+            }
         default:
             return state;
     }
