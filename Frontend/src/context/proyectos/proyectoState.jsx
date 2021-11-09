@@ -1,8 +1,9 @@
 import React, { useReducer } from 'react';
+import {v4 as uuidv4} from 'uuid';
 
 import ProyectoContext from './proyectoContext';
 import proyectoReducer from './proyectoReducer';
-import { FORMULARIO_PROYECTO, OBTENER_PROYECTOS } from '../../types';
+import { FORMULARIO_PROYECTO, OBTENER_PROYECTOS, AGREGAR_PROYECTO, VALIDAR_FORMULARIO } from '../../types';
 
 
 
@@ -15,7 +16,8 @@ const ProyectoState = props => {
 
     const initialState = {
         proyectos: [ ],
-        formulario: false
+        formulario: false,
+        errorformulario: false
     }
 
     // Dispath para ejecutar las acciones 
@@ -36,13 +38,34 @@ const ProyectoState = props => {
         })
     }
 
+    // Agregar nuevo Proyecto
+    const agregarProyecto = proyecto => {
+        proyecto.id = uuidv4();
+
+        //Insertar el proyecto en el state
+        dispatch({
+            type: AGREGAR_PROYECTO,
+            payload: proyecto
+        })
+
+    }
+
+    const mostarError = () => {
+        dispatch({
+            type: VALIDAR_FORMULARIO
+        })
+    }
+
     return (
         <ProyectoContext.Provider 
             value={{
                 proyectos: state.proyectos,
                 formulario: state.formulario,
+                errorformulario: state.errorformulario,
                 mostrarFormulario,
-                obtenerProyectos
+                obtenerProyectos,
+                agregarProyecto,
+                mostarError
             }}
         >
             {props.children}
