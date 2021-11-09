@@ -4,8 +4,8 @@ import Tarea from './Tarea';
 const ListadoTarea = () => {
 
     const tareasproyecto = [
-        {nombre: 'Comprar Dominio', estado: true},
-        {nombre: 'Subir archivos a repositorio', estado: false}
+        {id: 1, nombre: 'Comprar Dominio', estado: true},
+        {id: 2, nombre: 'Subir archivos a repositorio', estado: false}
 
     ]
 
@@ -17,7 +17,7 @@ const ListadoTarea = () => {
                     ? (<li className="tarea"><p>No hay tareas</p></li>) 
                     : (<li>
                         {tareasproyecto.map(tareas => (
-                       <Tarea props={tareas} />
+                       <Tarea props={tareas} key={tareas.id} />
                     ))} 
                     </li>)
                 }
