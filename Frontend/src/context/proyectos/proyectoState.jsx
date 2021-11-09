@@ -6,7 +6,7 @@ import proyectoReducer from './proyectoReducer';
 const ProyectoState = props => {
 
     const initialState = {
-        formulario: false
+        formulario: true
     }
 
     // Dispath para ejecutar las acciones 
