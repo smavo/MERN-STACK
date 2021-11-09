@@ -4,7 +4,6 @@ import ProyectoContext from '../../context/proyectos/proyectoContext'
 
 const ListarProyecto = () => {
 
-    
     // Extraer proyectos de State Inicial
     const proyectosContext = useContext(ProyectoContext)
     const { proyectos, obtenerProyectos } = proyectosContext

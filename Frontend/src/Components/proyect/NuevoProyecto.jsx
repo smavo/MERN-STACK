@@ -1,5 +1,5 @@
-import React, { Fragment, useState, useContext } from 'react'
-import ProyectoContext from '../../context/proyectos/proyectoContext'
+import React, { Fragment, useState, useContext } from 'react';
+import ProyectoContext from '../../context/proyectos/proyectoContext';
 
 const NuevoProyecto = () => {
 
