@@ -3,7 +3,8 @@ import {v4 as uuidv4} from 'uuid';
 
 import ProyectoContext from './proyectoContext';
 import proyectoReducer from './proyectoReducer';
-import { FORMULARIO_PROYECTO, OBTENER_PROYECTOS, AGREGAR_PROYECTO, VALIDAR_FORMULARIO } from '../../types';
+import { FORMULARIO_PROYECTO, OBTENER_PROYECTOS, AGREGAR_PROYECTO, 
+         VALIDAR_FORMULARIO, PROYECTO_ACTUAL, ELIMINAR_PROYECTO } from '../../types';
 
 
 
@@ -17,7 +18,8 @@ const ProyectoState = props => {
     const initialState = {
         proyectos: [ ],
         formulario: false,
-        errorformulario: false
+        errorformulario: false,
+        proyecto: null
     }
 
     // Dispath para ejecutar las acciones 
@@ -56,16 +58,35 @@ const ProyectoState = props => {
         })
     }
 
+    // Selecciona el proyecto al hacer clic
+    const proyectoActual = proyectoId => {
+        dispatch({
+            type: PROYECTO_ACTUAL,
+            payload: proyectoId
+        })
+    }
+
+    // Eliminar Proyecto
+    const eliminarProyecto = proyectoId => {
+        dispatch ({
+            type: ELIMINAR_PROYECTO,
+            payload: proyectoId
+        })
+    }
+
     return (
         <ProyectoContext.Provider 
             value={{
                 proyectos: state.proyectos,
                 formulario: state.formulario,
                 errorformulario: state.errorformulario,
+                proyecto: state.proyecto,
                 mostrarFormulario,
                 obtenerProyectos,
                 agregarProyecto,
-                mostarError
+                mostarError,
+                proyectoActual,
+                eliminarProyecto
             }}
         >
             {props.children}
